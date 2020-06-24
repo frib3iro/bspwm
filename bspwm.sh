@@ -18,22 +18,22 @@ clear
 ## instalando bspwm
 echo -e "${seta} ${azul}instalando bspwm${fim}"
 sleep 2s
-sudo apt instalando bspwm -y
+sudo apt install bspwm -y
 clear
 ## instalando compton
 echo -e "${seta} ${azul}instalando compton${fim}"
 sleep 2s
-sudo apt instalando compton -y
+sudo apt install compton -y
 clear
 ## instalando feh
 echo -e "${seta} ${azul}instalando feh${fim}"
 sleep 2s
-sudo apt instalando feh -y
+sudo apt install feh -y
 clear
 ## instalando rofi
 echo -e "${seta} ${azul}instalando rofi${fim}"
 sleep 2s
-sudo apt instalando rofi -y
+sudo apt install rofi -y
 clear
 
 ## Dependencias -------------------------------------------------------------------
