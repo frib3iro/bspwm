@@ -59,27 +59,18 @@ clear
 # sudo pacman -S libxcb xcb-util xcb-util-wm xcb-util-keysyms
 # clear
 
-## building and Instalaling -------------------------------------------------------
+## Baixando e instalando ----------------------------------------------------------
 
 ## Baixando e instalando 
 echo -e "${seta} ${azul}Building and instalandoing${fim}"
 sleep 2s
 git clone https://github.com/baskerville/bspwm.git
 git clone https://github.com/baskerville/sxhkd.git
-cd bspwm && make && sudo make instalando
-cd ../sxhkd && make && sudo make instalando
+cd bspwm && make && sudo make install
+cd ../sxhkd && make && sudo make install
 echo -e "${seta} ${azul}Aperte enter para continuar${fim}"
 read
 clear
-
-## Desinstalando ------------------------------------------------------------------
-
-## Desintalando
-# cd bspwm && sudo make uninstalando
-# cd ../sxhkd && sudo make uninstalando
-# echo -e "${seta} ${azul}Aperte enter para continuar${fim}"
-# read
-# clear
 
 ## Rodando ------------------------------------------------------------------------
 
@@ -94,7 +85,7 @@ echo -e "${seta} ${azul}Aperte enter para continuar${fim}"
 read
 clear
 
-## To start bspwm at login add exec bspwm to the bottom of your ~/.xinitrc or ~/.xprofile (depending on how your launch your X/Display manager). The example bspwmrc launches sxhkd for you.
+## To start bspwm at login add exec bspwm
 echo -e "${seta} ${azul}To start bspwm at login${fim}"
 sleep 2s
 echo "sxhkd &" >> ~/.xinitrc
