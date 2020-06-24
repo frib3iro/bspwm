@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 clear
 # variaveis
 azul='\e[34;1m'                                                                         
@@ -14,6 +15,12 @@ sleep 2s
 clear
 
 ## instalando pacotes ---------------------------------------------------------------
+
+## instalando build-essential
+echo -e "${seta} ${azul}build-essential${fim}"
+sleep 2s
+sudo apt-get install build-essential
+clear
 
 ## instalando bspwm
 echo -e "${seta} ${azul}instalando bspwm${fim}"
