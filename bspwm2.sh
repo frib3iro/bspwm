@@ -17,13 +17,11 @@ clear
 echo -e "${seta} ${azul}instalando o gcc e make${fim}"
 sleep 2s
 sudo apt install gcc make -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
+clear
+
 echo -e "${seta} ${azul}build-essential${fim}"
 sleep 2s
 sudo apt install build-essential -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 ## Instalando as dependências
@@ -39,8 +37,6 @@ git clone https://github.com/baskerville/bspwm.git
 git clone https://github.com/baskerville/sxhkd.git
 cd bspwm && make && sudo make install
 cd ../sxhkd && make && sudo make install
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 ## Criando diretórios do bspwm e sxhkd
@@ -77,9 +73,6 @@ echo -e "${seta} ${azul}Iniciando o bspwm no login${fim}"
 sleep 2s
 echo "sxhkd &" >> ~/.xinitrc
 echo "exec bspwm" >> ~/.xinitrc
-cat ~/.xinitrc
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 # ## configuração --------------------------------------------------------------------
