@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+## Install packages ---------------------------------------------------------------
+
 ## Install bspwm
 echo "Install bspwm"
 sleep 2s
@@ -21,12 +23,12 @@ sleep 2s
 sudo apt install rofi -y
 clear
 
-## Dependencies
+## Dependencies -------------------------------------------------------------------
 
 ## Ubuntu/Debian
 echo "Install ubuntu dependencies"
 sleep 2s
-sudo apt-get install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
+sudo apt-get install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev -y
 clear
 
 ## Arch Linux
@@ -34,6 +36,8 @@ clear
 # sleep 2s
 # sudo pacman -S libxcb xcb-util xcb-util-wm xcb-util-keysyms
 # clear
+
+## building and Instalaling -------------------------------------------------------
 
 ## Building and Installing
 echo "Building and Installing"
@@ -44,9 +48,13 @@ cd bspwm && make && sudo make install
 cd ../sxhkd && make && sudo make install
 clear
 
+## Uninstaling --------------------------------------------------------------------
+
 ## Uninstalling
 # cd bspwm && sudo make uninstall
 # cd ../sxhkd && sudo make uninstall
+
+## Running ------------------------------------------------------------------------
 
 ## Running bspwm
 echo "Running bspwm"
@@ -64,13 +72,13 @@ echo "sxhkd &" >> ~/.xinitrc
 echo "exec bspwm" >> ~/.xinitrc
 clear
 
-## config ------------------------------------------------------------
+## config -------------------------------------------------------------------------
 echo "Config bspwmrc"
 sleep 2s
 sed -i '/sxhkd &/a wmname LG3D &' ~/.bspwmrc
 sed -i '/wmname LG3D &/a bspc config pointer_modifier mod1' ~/.bspwmrc
 clear
-## -------------------------------------------------------------------
+## --------------------------------------------------------------------------------
 echo "Config sxhkdrc"
 sleep 2s
 sed -i 's/urxvt/xfce4-terminal' ~/.config/sxhkd/sxhkdrc
@@ -78,5 +86,5 @@ sed -i '/@space/d' ~/.config/sxhkd/sxhkdrc
 sed -i 's/dmenu-run/rofi -show run' ~/.config/sxhkd/sxhkdrc
 ? sed -i 's/{h,j,k,l}/{Left,Down,Up,Right}/' ~/.config/sxhkd/sxhkdrc
 clear
-##--------------------------------------------------------------------
+##---------------------------------------------------------------------------------
 
