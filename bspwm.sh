@@ -19,7 +19,7 @@ clear
 ## instalando build-essential
 echo -e "${seta} ${azul}build-essential${fim}"
 sleep 2s
-sudo apt-get install build-essential
+sudo apt-get install build-essential -y
 clear
 
 ## instalando bspwm
