@@ -19,7 +19,8 @@ clear
 ## instalando build-essential
 echo -e "${seta} ${azul}build-essential${fim}"
 sleep 2s
-sudo apt-get install build-essential -y
+sudo apt install gcc make -y
+sudo apt install build-essential -y
 clear
 
 ## instalando bspwm
@@ -43,9 +44,9 @@ sleep 2s
 sudo apt install rofi -y
 clear
 
-## Dependencias -------------------------------------------------------------------
+## Dependências -------------------------------------------------------------------
 
-## Ubuntu/Debian
+## Dependências Ubuntu/Debian
 echo -e "${seta} ${azul}instalando ubuntu dependencies${fim}"
 sleep 2s
 sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev -y
@@ -58,8 +59,6 @@ clear
 # sleep 2s
 # sudo pacman -S libxcb xcb-util xcb-util-wm xcb-util-keysyms
 # clear
-
-## Baixando e instalando ----------------------------------------------------------
 
 ## Baixando e instalando 
 echo -e "${seta} ${azul}Building and instalandoing${fim}"
@@ -75,7 +74,7 @@ clear
 ## Rodando ------------------------------------------------------------------------
 
 ## Rodando bspwm
-echo -e "${seta} ${azul}Running bspwm${fim}"
+echo -e "${seta} ${azul}Rodando o bspwm${fim}"
 sleep 2s
 mkdir -p ~/.config/{bspwm,sxhkd}
 cp /usr/local/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
@@ -85,8 +84,8 @@ echo -e "${seta} ${azul}Aperte enter para continuar${fim}"
 read
 clear
 
-## To start bspwm at login add exec bspwm
-echo -e "${seta} ${azul}To start bspwm at login${fim}"
+## Iniciando o bspwm no login
+echo -e "${seta} ${azul}Iniciando o bspwm no login${fim}"
 sleep 2s
 echo "sxhkd &" >> ~/.xinitrc
 echo "exec bspwm" >> ~/.xinitrc
@@ -95,7 +94,7 @@ read
 clear
 
 ## configuração --------------------------------------------------------------------
-echo -e "${seta} ${azul}Config bspwmrc${fim}"
+echo -e "${seta} ${azul}Configurando o bspwmrc${fim}"
 sleep 2s
 sed -i '/sxhkd &/a wmname LG3D &' ~/.bspwmrc
 sed -i '/wmname LG3D &/a bspc config pointer_modifier mod1' ~/.bspwmrc
@@ -103,7 +102,7 @@ echo -e "${seta} ${azul}Aperte enter para continuar${fim}"
 read
 clear
 ## --------------------------------------------------------------------------------
-echo -e "${seta} ${azul}Config sxhkdrc${fim}"
+echo -e "${seta} ${azul}Configurando o sxhkdrc${fim}"
 sleep 2s
 sed -i 's/urxvt/xfce4-terminal' ~/.config/sxhkd/sxhkdrc
 sed -i '/@space/d' ~/.config/sxhkd/sxhkdrc
