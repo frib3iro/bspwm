@@ -41,7 +41,7 @@ clear
 ## Ubuntu/Debian
 echo -e "${seta} ${azul}instalando ubuntu dependencies${fim}"
 sleep 2s
-sudo apt-get instalando libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev -y
+sudo apt install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev -y
 echo -e "${seta} ${azul}Aperte enter para continuar${fim}"
 read
 clear
