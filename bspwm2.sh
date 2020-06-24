@@ -24,6 +24,36 @@ sleep 2s
 sudo apt install build-essential -y
 clear
 
+## Instalando xinit
+echo -e "${seta} ${azul}Instalando xinit${fim}"
+sleep 2s
+sudo apt install xinit -y
+clear
+## Instalando compton
+echo -e "${seta} ${azul}Instalando compton${fim}"
+sleep 2s
+sudo apt install compton -y
+clear
+
+## Instalando feh
+echo -e "${seta} ${azul}Instalando feh${fim}"
+sleep 2s
+sudo apt install feh -y
+clear
+
+## Instalando rofi
+echo -e "${seta} ${azul}Instalando rofi${fim}"
+sleep 2s
+sudo apt install rofi -y
+clear
+
+## Iniciando o bspwm no login
+echo -e "${seta} ${azul}Iniciando o bspwm no login${fim}"
+sleep 2s
+echo "sxhkd &" >> ~/.xinitrc
+echo "exec bspwm" >> ~/.xinitrc
+clear
+
 ## Instalando as dependências
 echo -e "${seta} ${azul}Instalando as dependências${fim}"
 sleep 2s
@@ -48,31 +78,6 @@ cp /usr/local/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
 chmod u+x ~/.config/bspwm/bspwmrc
 echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
 read
-clear
-
-## Instalando compton
-echo -e "${seta} ${azul}Instalando compton${fim}"
-sleep 2s
-sudo apt install compton -y
-clear
-
-## Instalando feh
-echo -e "${seta} ${azul}Instalando feh${fim}"
-sleep 2s
-sudo apt install feh -y
-clear
-
-## Instalando rofi
-echo -e "${seta} ${azul}Instalando rofi${fim}"
-sleep 2s
-sudo apt install rofi -y
-clear
-
-## Iniciando o bspwm no login
-echo -e "${seta} ${azul}Iniciando o bspwm no login${fim}"
-sleep 2s
-echo "sxhkd &" >> ~/.xinitrc
-echo "exec bspwm" >> ~/.xinitrc
 clear
 
 # ## configuração --------------------------------------------------------------------
