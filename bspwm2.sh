@@ -14,9 +14,13 @@ sleep 2s
 clear
 
 ## Instalando build-essential
-echo -e "${seta} ${azul}build-essential${fim}"
+echo -e "${seta} ${azul}instalando o gcc e make${fim}"
 sleep 2s
 sudo apt install gcc make -y
+echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
+read
+echo -e "${seta} ${azul}build-essential${fim}"
+sleep 2s
 sudo apt install build-essential -y
 echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
 read
@@ -26,8 +30,6 @@ clear
 echo -e "${seta} ${azul}Instalando as dependências${fim}"
 sleep 2s
 sudo apt install xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 ## Baixando e Instalando 
@@ -56,32 +58,18 @@ clear
 echo -e "${seta} ${azul}Instalando compton${fim}"
 sleep 2s
 sudo apt install compton -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 ## Instalando feh
 echo -e "${seta} ${azul}Instalando feh${fim}"
 sleep 2s
 sudo apt install feh -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 ## Instalando rofi
 echo -e "${seta} ${azul}Instalando rofi${fim}"
 sleep 2s
 sudo apt install rofi -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
-clear
-
-## Instalando xinitrc
-echo -e "${seta} ${azul}Instalando xinitrc${fim}"
-sleep 2s
-sudo apt install xinitrc -y
-echo -e "${seta} ${amarelo}Aperte enter para continuar${fim}"
-read
 clear
 
 ## Iniciando o bspwm no login
