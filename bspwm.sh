@@ -1,24 +1,37 @@
 #!/usr/bin/env bash
 
+clear
+# variaveis
+azul='\e[34;1m'                                                                         
+verde='\e[32;1m'
+vermelho='\e[31;1m'
+amarelo='\e[33;1m'
+fim='\e[m'
+seta='\e[32;1m-->\e[m'
+
+echo -e "${seta} ${azul}Bem vindo a instalação e configuração do bspwm${fim}"
+sleep 2s
+clear
+
 ## Install packages ---------------------------------------------------------------
 
 ## Install bspwm
-echo "Install bspwm"
+echo -e "${seta} ${azul}Install bspwm${fim}"
 sleep 2s
 sudo apt install bspwm -y
 clear
 ## Install compton
-echo "Install compton"
+echo -e "${seta} ${azul}Install compton${fim}"
 sleep 2s
 sudo apt install compton -y
 clear
 ## Install feh
-echo "Install feh"
+echo -e "${seta} ${azul}Install feh${fim}"
 sleep 2s
 sudo apt install feh -y
 clear
 ## Install rofi
-echo "Install rofi"
+echo -e "${seta} ${azul}Install rofi${fim}"
 sleep 2s
 sudo apt install rofi -y
 clear
@@ -26,7 +39,7 @@ clear
 ## Dependencies -------------------------------------------------------------------
 
 ## Ubuntu/Debian
-echo "Install ubuntu dependencies"
+echo -e "${seta} ${azul}Install ubuntu dependencies${fim}"
 sleep 2s
 sudo apt-get install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev -y
 clear
@@ -40,7 +53,7 @@ clear
 ## building and Instalaling -------------------------------------------------------
 
 ## Building and Installing
-echo "Building and Installing"
+echo -e "${seta} ${azul}Building and Installing${fim}"
 sleep 2s
 git clone https://github.com/baskerville/bspwm.git
 git clone https://github.com/baskerville/sxhkd.git
@@ -57,7 +70,7 @@ clear
 ## Running ------------------------------------------------------------------------
 
 ## Running bspwm
-echo "Running bspwm"
+echo -e "${seta} ${azul}Running bspwm${fim}"
 sleep 2s
 mkdir -p ~/.config/{bspwm,sxhkd}
 cp /usr/local/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
@@ -66,25 +79,25 @@ chmod u+x ~/.config/bspwm/bspwmrc
 clear
 
 ## To start bspwm at login add exec bspwm to the bottom of your ~/.xinitrc or ~/.xprofile (depending on how your launch your X/Display manager). The example bspwmrc launches sxhkd for you.
-echo ""
+echo -e "${seta} ${azul}To start bspwm at login${fim}"
 sleep 2s
 echo "sxhkd &" >> ~/.xinitrc
 echo "exec bspwm" >> ~/.xinitrc
 clear
 
 ## config -------------------------------------------------------------------------
-echo "Config bspwmrc"
+echo -e "${seta} ${azul}Config bspwmrc${fim}"
 sleep 2s
 sed -i '/sxhkd &/a wmname LG3D &' ~/.bspwmrc
 sed -i '/wmname LG3D &/a bspc config pointer_modifier mod1' ~/.bspwmrc
 clear
 ## --------------------------------------------------------------------------------
-echo "Config sxhkdrc"
+echo -e "${seta} ${azul}Config sxhkdrc${fim}"
 sleep 2s
 sed -i 's/urxvt/xfce4-terminal' ~/.config/sxhkd/sxhkdrc
 sed -i '/@space/d' ~/.config/sxhkd/sxhkdrc
 sed -i 's/dmenu-run/rofi -show run' ~/.config/sxhkd/sxhkdrc
-? sed -i 's/{h,j,k,l}/{Left,Down,Up,Right}/' ~/.config/sxhkd/sxhkdrc
+sed -i 's/{h,j,k,l}/{Left,Down,Up,Right}/' ~/.config/sxhkd/sxhkdrc
 clear
 ##---------------------------------------------------------------------------------
 
